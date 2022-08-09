@@ -34,21 +34,45 @@ hearder:h1{
 }  
 
 p{
-  position: relative;
+   position: relative;
    text-decoration: none;
    color: black;
    transition: all 0.5s;
    cursor: pointer;
    display: inline-block;
-   margin-left: 20px;
+   margin-left: 30px;
    top: 20px;
    font-family: Courier New, monospace;
 }  
 
 p:hover {
   height: 20px;
-  width: 50px;
-   color: white;
+  width: 80px;
+  color: white;
+  border-top: 3px solid white;
+  border-bottom: 3px solid white;
+}
+
+a:link{
+   position: relative;
+   text-decoration: none;
+   color: black;
+   transition: all 0.5s;
+   cursor: pointer;
+   display: inline-block;
+   margin-left: 30px;
+   top: 20px;
+   font-family: Courier New, monospace;
+}
+
+a:visited{
+  color: black;
+}
+
+a:hover{
+  height: 20px;
+  width: 80px;
+  color: white;
   border-top: 3px solid white;
   border-bottom: 3px solid white;
 }
