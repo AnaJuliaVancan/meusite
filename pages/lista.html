@@ -1,37 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/page4.css">
-    <script src="script.js"></script>
-  
-    <title>Primeira Página</title>
-  
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/page4.css">
+  <script src="../script.js"></script>
+
+  <title>Primeira Página</title>
+
 </head>
-<body>
-    <header>
-        <h1 class="titulo">Art Tips</h1>
-       <center>
-        <a href="../index.html">Home</a>
-        <a href="papeis.html">Papeis</a>
-        <a href="pinceis.html">Pinceis</a>
-        <a href="tintas.html">Tintas</a>
-        <p>Lista</p>
-         
-      </center>
-    </header>
 
-    <main>
-      <h1>Bem-vindos</h1>
-      <span class="apresentacao">Tenham acesso a diversas dicas para sua pintura</span>
-      <img src="/imagens/aquarela.png" alt="some text" height="90%" width="70%">
-    </main>
+<body onload="renderizar()">
+  <header>
+    <h1 class="titulo">Art Tips</h1>
+    <center>
+      <a href="../index.html">Home</a>
+      <a href="papeis.html">Papeis</a>
+      <a href="pinceis.html">Pinceis</a>
+      <a href="tintas.html">Tintas</a>
+      <p>Lista</p>
 
-   <footer>
-    <center><h3>Todos os direitos reservados - 2022</h3></center>
-   </footer>
+    </center>
+  </header>
+
+  <main>
+    <h1 id="titulo">Minha Lista</h1>
+
+    <div id="container">
+
+      <ul id="lista"></ul>
+
+      <div id="entrada">
+        <label>Item:</label>
+        <input id="item" type="text">
+        <button type="button" onclick="adicionarItem()">Adicionar</button>
+        <button type="button" onclick="limparLista()">Limpar</button>
+        <button type="button" onclick="ordenar()">Organizar</button>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <center>
+      <h3>Todos os direitos reservados - 2022</h3>
+    </center>
+  </footer>
 
 </body>
+
 </html>
