@@ -1,70 +1,80 @@
 let modelo = {
-  titulo: "Minha Lista",
-  itens:  [ ]
+  titulo: " ",
+  itens: [
+    "Teste"
+  ]
 }
 
-function adicionarItem(){
-    var itemEntrada = document.getElementById("item");
-    var valorEntrada = itemEntrada.value.trim();
-    itemEntrada.value = "";
+function salvar() {
+  localStorage.setItem("modelo", JSON.stringify(modelo));
+}
 
-    var tamanho = valorEntrada.length
-
-    if ((tamanho >= 3) && (tamanho <= 50)) {
-        modelo.itens.push(valorEntrada);
-        renderizar();
-    
-        var divMensagem = document.getElementById("mensagem");
-        divMensagem.innerText = "O item " + valorEntrada + "foi aceito e inserido com sucesso!!";
-      } 
-      else {
-        confirm("Por favor, adicione um número maior ou menor de caracteres!!");
-      }
-    }
-
-function removerItem(i){
-  modelo.itens.splice(i, 1);
+function carregar() {
+  let modeloSalvo = localStorage.getItem("modelo");
+  if (modeloSalvo) {
+    modelo = JSON.parse(modeloSalvo);
+  }
   renderizar();
 }
-    
-function renderizar(){
-  let lista = document.getElementById("lista");
-  lista.innerHTML = "";
-  
-  for (let i = 0; i < modelo.itens.length; i++){
-      let item = modelo.itens[i];
 
-      let novoItem = document.createElement("li");
-      
-      let botao = document.createElement("span");
-      botao.textContent = "🗑";
-      botao.className = "btnRemover";
-      botao.onclick = function() {
-         removerItem(i);
-      }
+function adicionarItem() {
+  var itemEntrada = document.getElementById("item");
+  var valorEntrada = itemEntrada.value.trim();
+  itemEntrada.value = "";
 
-      let texto = document.createElement("span");
-      texto.textContent = item;
+  var tamanho = valorEntrada.length
 
-      novoItem.appendChild(botao);
-      novoItem.appendChild(texto);
+  if ((tamanho >= 3) && (tamanho <= 50)) {
+    modelo.itens.push(valorEntrada);
+    renderizar();
 
-      lista.appendChild(novoItem);
-
+    var divMensagem = document.getElementById("mensagem");
+    divMensagem.innerText = "O item " + valorEntrada + "foi aceito e inserido com sucesso!!";
+  }
+  else {
+    confirm("Por favor, adicione um número maior ou menor de caracteres!!");
   }
 }
 
-function limparLista() {
-   modelo.itens = [];
-   renderizar();
-}
-
-function bebaAgua(){
-  modelo.itens.push("Beba muita água!!!");
+function removerItem(i) {
+  modelo.itens.splice(i, 1);
   renderizar();
 }
 
-function ordenar(){
+function renderizar() {
+  let lista = document.getElementById("lista");
+  lista.innerHTML = "";
+
+  for (let i = 0; i < modelo.itens.length; i++) {
+    let item = modelo.itens[i];
+
+    let novoItem = document.createElement("li");
+
+    let botao = document.createElement("span");
+    botao.textContent = "🗑";
+    botao.className = "btnRemover";
+    botao.onclick = function() {
+      removerItem(i);
+    }
+
+    let texto = document.createElement("span");
+    texto.textContent = item;
+
+    novoItem.appendChild(botao);
+    novoItem.appendChild(texto);
+
+    lista.appendChild(novoItem);
+
+  }
+
+}
+
+function limparLista() {
+  modelo.itens = [];
+  renderizar();
+}
+
+function ordenar() {
   modelo.itens.sort();
   renderizar();
 }

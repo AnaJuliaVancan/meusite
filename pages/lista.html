@@ -12,36 +12,38 @@
 
 </head>
 
-<body onload="renderizar()">
+<body onload="carregar()">
   <header>
-    <h1 class="titulo">Art Tips</h1>
+    <h1 class="titulo2">Art Tips</h1>
     <center>
       <a href="../index.html">Home</a>
       <a href="papeis.html">Papeis</a>
       <a href="pinceis.html">Pinceis</a>
       <a href="tintas.html">Tintas</a>
       <p>Lista</p>
-
     </center>
   </header>
 
   <main>
-    <h1 id="titulo">Minha Lista</h1>
-
     <div id="container">
+       <center><h1 id="titulo"><span id="textoTitulo">Meus Livros Favoritos</span> <span id="btnEditar" onclick="trocarTitulo()">🖉</span></h1></center>
 
-      <ul id="lista"></ul>
+       <center>
+       <ul id="lista"></ul>
+         </center>
 
-      <div id="entrada">
+      <center> 
+    <div id="entrada">
         <label>Item:</label>
         <input id="item" type="text">
         <button type="button" onclick="adicionarItem()">Adicionar</button>
         <button type="button" onclick="limparLista()">Limpar</button>
         <button type="button" onclick="ordenar()">Organizar</button>
       </div>
+</center>
     </div>
-  </main>
-
+</main>
+  
   <footer>
     <center>
       <h3>Todos os direitos reservados - 2022</h3>
@@ -49,5 +51,4 @@
   </footer>
 
 </body>
-
 </html>
