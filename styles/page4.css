@@ -36,22 +36,16 @@ hearder:h1{
 p{
    position: relative;
    text-decoration: none;
-   color: black;
+   color: white;
    transition: all 0.5s;
    cursor: pointer;
    display: inline-block;
    margin-left: 30px;
-   top: 20px;
+   top: -30px;
    font-family: Courier New, monospace;
+   border-top: 3px solid white;
+   border-bottom: 3px solid white;
 }  
-
-p:hover {
-  height: 20px;
-  width: 80px;
-  color: white;
-  border-top: 3px solid white;
-  border-bottom: 3px solid white;
-}
 
 a:link{
    position: relative;
@@ -61,7 +55,7 @@ a:link{
    cursor: pointer;
    display: inline-block;
    margin-left: 30px;
-   top: 20px;
+   top: -30px;
    font-family: Courier New, monospace;
 }
 
@@ -77,7 +71,7 @@ a:hover{
   border-bottom: 3px solid white;
 }
 
-.titulo2{
+.titleP{
   margin-left: 10px;
   margin-top: 3px;
   font-size: 50px;
@@ -93,26 +87,35 @@ footer{
     font-family: Courier New, monospace;
 }
 
-.titulo2{
-  position: absolute;
-  margin-left: 55%;
-  margin-top: 10%;
+#titulo{
+  margin-top: 5%;
   font-size: 50px;
   font-family: Courier New, monospace;
 }
 
-.t1{
+#item{
+  width: 40%;
+  padding: 10px 10px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+#lista{
   font-family: Courier New, monospace;
+  text-decoration: none;
+}
+#bnt{
+  background-color:  #695f7c;
+  height: 30px;
+  width: 90px;
+  border-color: white;
+  margin-bottom: 28%;
 }
 
-.bnt{
-  background-color:  black;
-}
-
-.bnt:hover{
-  height: 20px;
-  width: 80px;
+#bnt:hover{
+  height: 30px;
+  width: 90px;
   background-color: white;
-  border-top: 3px solid white;
-  border-bottom: 3px solid white;
+  border-top: 3px solid #695f7c;
+  border-bottom: 3px solid #695f7c;
 }
