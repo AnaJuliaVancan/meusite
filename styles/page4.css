@@ -36,15 +36,13 @@ hearder:h1{
 p{
    position: relative;
    text-decoration: none;
-   color: white;
+   color: black;
    transition: all 0.5s;
    cursor: pointer;
    display: inline-block;
    margin-left: 30px;
    top: -30px;
    font-family: Courier New, monospace;
-   border-top: 3px solid white;
-   border-bottom: 3px solid white;
 }  
 
 a:link{

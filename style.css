@@ -45,14 +45,6 @@ p{
    font-family: Courier New, monospace;
 }  
 
-p:hover {
-  height: 20px;
-  width: 80px;
-  color: white;
-  border-top: 3px solid white;
-  border-bottom: 3px solid white;
-}
-
 a:link{
    position: relative;
    text-decoration: none;
@@ -108,7 +100,8 @@ h1{
 
 .apresentacao{
   position: absolute;
-  margin-left: 45%;
+  margin-left: 40%;
+  margin-right: 5%;
   margin-top: 20%;
   font-size: larger;
   font-family: Courier New, monospace;
